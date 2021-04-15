@@ -1,0 +1,20 @@
+<div class="container">
+    <form [formGroup]="form">
+  
+        Input <input type="number" formControlName="baseRate"> THB
+ 
+    </form>
+    <div>
+        <p>
+        Output <textarea cols="20" rows="1" style="background-color: lightgray;">{{convert}}</textarea>
+            <span >{{exchangeRates.base}}</span>
+        </p>
+    </div> 
+    <div >
+        Click for calculate <button (click) = "covertFxRate()">Convert</button>
+    </div>
+    <div >
+        <p style="color: red; font-size: 14px; " >Exchange Rate 1 EUR = {{exchangeRates.rates.THB}} THB</p>
+    </div>
+</div>
+
